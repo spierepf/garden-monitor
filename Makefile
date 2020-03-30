@@ -15,3 +15,9 @@ run-app:
 
 install-deps:
 	cd pyboard && MICROPYPATH=./lib:. micropython -m upip install -r ../requirements.txt
+
+run-update-local:
+	cd pyboard && MICROPYPATH=./lib:. micropython -m update
+
+run-update:
+	rshell repl \~ import update \~
