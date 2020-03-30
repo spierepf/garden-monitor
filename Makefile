@@ -12,3 +12,6 @@ run-app-local:
 
 run-app:
 	rshell repl \~ import app \~
+
+install-deps:
+	cd pyboard && MICROPYPATH=./lib:. micropython -m upip install -r ../requirements.txt
