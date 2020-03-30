@@ -6,3 +6,9 @@ upload:
 
 download:
 	rshell rsync /pyboard pyboard
+
+run-app-local:
+	cd pyboard && MICROPYPATH=./lib:. micropython -m app
+
+run-app:
+	rshell repl \~ import app \~
